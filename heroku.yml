@@ -2,9 +2,4 @@ build:
   docker:
     support-bot: Dockerfile
 run:
-  config:
-    TG_BOT_TOKEN: $TG_BOT_TOKEN
-    TG_CHAT_ID: $TG_CHAT_ID
-    DIALOGFLOW_PROJECT_ID: $DIALOGFLOW_PROJECT_ID
-    GOOGLE_APPLICATION_CREDENTIALS: $GOOGLE_APPLICATION_CREDENTIALS
-    VK_ACCESS_KEY: $VK_ACCESS_KEY
+  support-bot: docker run --name support-bot-container -d --env-file .env support-bot
